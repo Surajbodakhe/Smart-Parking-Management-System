@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking - Reports</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🚗 Smart Parking</h1>
+                <p>Search & Reports</p>
+            </div>
+
+            <div class="user-info">
+
+                <span id="userName">User</span>
+
+                <span id="userRole">USER</span>
+
+                <button id="backBtn">
+                    Dashboard
+                </button>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE INTRO -->
+        <section class="welcome-section">
+
+            <h2>📊 Reports Dashboard</h2>
+
+            <p>
+                Search vehicles and view parking payment reports.
+            </p>
+
+        </section>
+
+
+        <!-- VEHICLE SEARCH -->
+        <section class="reservation-form-section">
+
+            <div class="reservation-form-card">
+
+                <h2>🔍 Vehicle Search</h2>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="vehicleSearch"
+                        placeholder="Enter vehicle number, name, type..."
+                    >
+
+                    <button id="searchVehicleBtn">
+                        Search
+                    </button>
+
+                </div>
+
+                <p id="searchMessage"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- VEHICLE SEARCH RESULTS -->
+        <section class="reservation-list-section">
+
+            <h2>🚗 Vehicle Search Results</h2>
+
+            <div id="vehicleResultContainer">
+
+                <p class="loading">
+                    Search for a vehicle to see results.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- REVENUE REPORT -->
+        <section class="reservation-list-section">
+
+            <h2>💰 Revenue Report</h2>
+
+            <div id="revenueContainer">
+
+                <p class="loading">
+                    Loading revenue report...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAYMENT REPORT -->
+        <section class="reservation-list-section">
+
+            <h2>💳 Payment Report</h2>
+
+            <div id="paymentReportContainer">
+
+                <p class="loading">
+                    Loading payment report...
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="js/reports.js"></script>
+
+</body>
+
+</html>

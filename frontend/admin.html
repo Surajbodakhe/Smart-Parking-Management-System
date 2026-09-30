@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🚗 Smart Parking</h1>
+                <p>Admin Management Dashboard</p>
+            </div>
+
+            <div class="user-info">
+
+                <span id="userName">Admin</span>
+
+                <span id="userRole">ADMIN</span>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Welcome -->
+        <section class="welcome-section">
+
+            <h2>
+                Welcome, <span id="welcomeName">Admin</span> 👋
+            </h2>
+
+            <p>
+                Manage users, vehicles, parking and payments.
+            </p>
+
+        </section>
+
+
+        <!-- Admin Menu -->
+        <section class="menu-section">
+
+            <div class="menu-card">
+                <h3>👥 Users</h3>
+
+                <p>
+                    View and manage registered users.
+                </p>
+
+                <button id="viewUsersBtn">
+                    View Users
+                </button>
+            </div>
+
+
+            <div class="menu-card">
+                <h3>🚗 Vehicles</h3>
+
+                <p>
+                    View all registered vehicles.
+                </p>
+
+                <button id="viewVehiclesBtn">
+                    View Vehicles
+                </button>
+            </div>
+
+
+            <div class="menu-card">
+                <h3>🅿️ Parking Slots</h3>
+
+                <p>
+                    Manage parking slots and status.
+                </p>
+
+                <button id="viewSlotsBtn">
+                    View Slots
+                </button>
+            </div>
+
+
+            <div class="menu-card">
+                <h3>📅 Reservations</h3>
+
+                <p>
+                    View and manage reservations.
+                </p>
+
+                <button id="viewReservationsBtn">
+                    View Reservations
+                </button>
+            </div>
+
+
+            <div class="menu-card">
+                <h3>💳 Payments</h3>
+
+                <p>
+                    View parking payments.
+                </p>
+
+                <button id="viewPaymentsBtn">
+                    View Payments
+                </button>
+            </div>
+
+
+            <div class="menu-card">
+                <h3>📊 Reports</h3>
+
+                <p>
+                    View revenue and parking reports.
+                </p>
+
+                <button id="viewReportsBtn">
+                    View Reports
+                </button>
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

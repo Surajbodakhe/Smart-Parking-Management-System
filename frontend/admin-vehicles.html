@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking - Admin Vehicles</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h1>🚗 Smart Parking</h1>
+
+            <p>Admin Vehicle Management</p>
+
+        </div>
+
+
+        <div class="user-info">
+
+            <span id="userName">
+                Admin
+            </span>
+
+            <span id="userRole">
+                ADMIN
+            </span>
+
+
+            <button id="backBtn">
+                Admin Dashboard
+            </button>
+
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         INTRO
+    ========================================= -->
+
+    <section class="welcome-section">
+
+        <h2>🚗 Vehicle Management</h2>
+
+        <p>
+            View and manage all registered vehicles.
+        </p>
+
+    </section>
+
+
+
+    <!-- ========================================
+         SEARCH
+    ========================================= -->
+
+    <section class="reservation-form-section">
+
+        <div class="reservation-form-card">
+
+            <h2>🔍 Search Vehicles</h2>
+
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="vehicleSearch"
+                    placeholder="Search by vehicle number, model or type"
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         VEHICLE LIST
+    ========================================= -->
+
+    <section class="reservation-list-section">
+
+        <h2>
+            📋 All Registered Vehicles
+        </h2>
+
+
+        <div id="vehicleContainer">
+
+            <p class="loading">
+                Loading vehicles...
+            </p>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<script src="js/admin-vehicles.js"></script>
+
+</body>
+
+</html>

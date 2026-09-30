@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking - Admin Parking</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🚗 Smart Parking</h1>
+                <p>Admin Parking Management</p>
+            </div>
+
+            <div class="user-info">
+
+                <span id="userName">Admin</span>
+
+                <span id="userRole">ADMIN</span>
+
+                <button id="backBtn">
+                    Admin Dashboard
+                </button>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- INTRO -->
+        <section class="welcome-section">
+
+            <h2>🅿️ Parking Slot Management</h2>
+
+            <p>
+                View and manage all parking slots.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH AND FILTER -->
+        <section class="reservation-form-section">
+
+            <div class="reservation-form-card">
+
+                <h2>🔍 Search & Filter Slots</h2>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="slotSearch"
+                        placeholder="Search slot number..."
+                    >
+
+                    <select id="statusFilter">
+
+                        <option value="ALL">
+                            All Status
+                        </option>
+
+                        <option value="AVAILABLE">
+                            Available
+                        </option>
+
+                        <option value="OCCUPIED">
+                            Occupied
+                        </option>
+
+                        <option value="RESERVED">
+                            Reserved
+                        </option>
+
+                        <option value="MAINTENANCE">
+                            Maintenance
+                        </option>
+
+                    </select>
+
+                    <button id="searchBtn">
+                        Search
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SLOT LIST -->
+        <section class="reservation-list-section">
+
+            <h2>📋 All Parking Slots</h2>
+
+            <div id="slotContainer">
+
+                <p class="loading">
+                    Loading parking slots...
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="js/admin-parking.js"></script>
+
+</body>
+
+</html>

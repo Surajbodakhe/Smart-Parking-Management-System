@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking - Reservations</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🚗 Smart Parking</h1>
+                <p>Reservation Management</p>
+            </div>
+
+            <div class="user-info">
+                <span id="userName">User</span>
+                <span id="userRole">USER</span>
+
+                <button id="backBtn">
+                    Dashboard
+                </button>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- Page Title -->
+        <section class="welcome-section">
+
+            <h2>📅 Parking Reservations</h2>
+
+            <p>
+                Book and manage your parking reservations.
+            </p>
+
+        </section>
+
+
+        <!-- Reservation Form -->
+        <section class="reservation-form-section">
+
+            <div class="reservation-form-card">
+
+                <h2>➕ Create Reservation</h2>
+
+                <form id="reservationForm">
+
+                    <label for="vehicleSelect">
+                        Select Vehicle
+                    </label>
+
+                    <select id="vehicleSelect" required>
+
+                        <option value="">
+                            Select your vehicle
+                        </option>
+
+                    </select>
+
+
+                    <label for="slotSelect">
+                        Select Parking Slot
+                    </label>
+
+                    <select id="slotSelect" required>
+
+                        <option value="">
+                            Select available slot
+                        </option>
+
+                    </select>
+
+
+                    <label for="startTime">
+                        Start Time
+                    </label>
+
+                    <input
+                        type="datetime-local"
+                        id="startTime"
+                        required
+                    >
+
+
+                    <label for="endTime">
+                        End Time
+                    </label>
+
+                    <input
+                        type="datetime-local"
+                        id="endTime"
+                        required
+                    >
+
+
+                    <button type="submit">
+                        Create Reservation
+                    </button>
+
+                    <p id="reservationMessage"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- My Reservations -->
+        <section class="reservation-list-section">
+
+            <h2>📋 My Reservations</h2>
+
+            <div id="reservationContainer">
+
+                <p class="loading">
+                    Loading reservations...
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="js/reservation.js"></script>
+
+</body>
+
+</html>

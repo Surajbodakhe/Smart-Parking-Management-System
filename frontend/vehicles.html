@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking - My Vehicles</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🚗 Smart Parking</h1>
+                <p>Vehicle Management</p>
+            </div>
+
+            <div class="user-info">
+
+                <span id="userName">User</span>
+
+                <span id="userRole">USER</span>
+
+                <button id="backBtn">
+                    Dashboard
+                </button>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- INTRO -->
+        <section class="welcome-section">
+
+            <h2>🚗 My Vehicles</h2>
+
+            <p>
+                Add, update and manage your vehicles.
+            </p>
+
+        </section>
+
+
+        <!-- ADD VEHICLE -->
+        <section class="reservation-form-section">
+
+            <div class="reservation-form-card">
+
+                <h2>➕ Add New Vehicle</h2>
+
+                <form id="vehicleForm">
+
+                    <label for="vehicleNumber">
+                        Vehicle Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="vehicleNumber"
+                        placeholder="e.g. MH12AB1234"
+                        required
+                    >
+
+                    <label for="vehicleType">
+                        Vehicle Type
+                    </label>
+
+                    <select id="vehicleType" required>
+
+                        <option value="">
+                            Select vehicle type
+                        </option>
+
+                        <option value="CAR">
+                            Car
+                        </option>
+
+                        <option value="BIKE">
+                            Bike
+                        </option>
+
+                        <option value="SUV">
+                            SUV
+                        </option>
+
+                        <option value="EV">
+                            EV
+                        </option>
+
+                    </select>
+
+                    <label for="vehicleModel">
+                        Model
+                    </label>
+
+                    <input
+                        type="text"
+                        id="vehicleModel"
+                        placeholder="e.g. Honda City"
+                    >
+
+                    <button type="submit">
+                        Add Vehicle
+                    </button>
+
+                    <p id="vehicleMessage"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- VEHICLE LIST -->
+        <section class="reservation-list-section">
+
+            <h2>📋 My Vehicle List</h2>
+
+            <div id="vehicleContainer">
+
+                <p class="loading">
+                    Loading vehicles...
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="js/vehicles.js"></script>
+
+</body>
+
+</html>

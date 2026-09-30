@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking - Users Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- HEADER -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🚗 Smart Parking</h1>
+                <p>Users Management</p>
+            </div>
+
+            <div class="user-info">
+
+                <span id="userName">Admin</span>
+
+                <span id="userRole">ADMIN</span>
+
+                <button id="backBtn">
+                    Admin Dashboard
+                </button>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- INTRO -->
+        <section class="welcome-section">
+
+            <h2>👥 Users Management</h2>
+
+            <p>
+                View and manage registered users.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH USERS -->
+        <section class="reservation-form-section">
+
+            <div class="reservation-form-card">
+
+                <h2>🔍 Search Users</h2>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="userSearch"
+                        placeholder="Search by name, email or phone"
+                    >
+
+                    <button id="searchBtn">
+                        Search
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- USER LIST -->
+        <section class="reservation-list-section">
+
+            <h2>📋 Registered Users</h2>
+
+            <div id="userContainer">
+
+                <p class="loading">
+                    Loading users...
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="js/users.js"></script>
+
+</body>
+
+</html>

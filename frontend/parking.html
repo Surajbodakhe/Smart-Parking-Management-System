@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Parking - Parking Slots</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>🚗 Smart Parking</h1>
+                <p>Parking Slot Management</p>
+            </div>
+
+            <div class="user-info">
+                <span id="userName">User</span>
+                <span id="userRole">USER</span>
+
+                <button id="backBtn">
+                    Dashboard
+                </button>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- Page Title -->
+        <section class="welcome-section">
+
+            <h2>🅿️ Parking Slots</h2>
+
+            <p>
+                Check parking slot availability and status.
+            </p>
+
+        </section>
+
+
+        <!-- Search & Filter -->
+        <section class="parking-controls">
+
+            <input
+                type="text"
+                id="searchSlot"
+                placeholder="🔍 Search slot number..."
+            >
+
+            <select id="statusFilter">
+
+                <option value="ALL">
+                    All Status
+                </option>
+
+                <option value="AVAILABLE">
+                    Available
+                </option>
+
+                <option value="OCCUPIED">
+                    Occupied
+                </option>
+
+                <option value="RESERVED">
+                    Reserved
+                </option>
+
+                <option value="MAINTENANCE">
+                    Maintenance
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Parking Slots -->
+        <section class="parking-section">
+
+            <div id="parkingContainer">
+
+                <p class="loading">
+                    Loading parking slots...
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="js/parking.js"></script>
+
+</body>
+
+</html>

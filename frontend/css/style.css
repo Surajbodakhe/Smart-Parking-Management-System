@@ -1,0 +1,733 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+
+    margin: auto;
+    padding: 35px;
+
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #1e3c72;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+.login-box input:focus {
+    outline: none;
+    border-color: #1e3c72;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 13px;
+
+    background: #1e3c72;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #16325c;
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* ============================= */
+/* DASHBOARD */
+/* ============================= */
+
+.dashboard {
+    min-height: 100vh;
+    background: #f4f6f8;
+}
+
+.dashboard-header {
+    background: white;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+    color: #1e3c72;
+}
+
+.dashboard-header p {
+    color: #666;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#userName {
+    font-weight: bold;
+}
+
+#userRole {
+    background: #1e3c72;
+    color: white;
+
+    padding: 6px 10px;
+    border-radius: 5px;
+
+    font-size: 12px;
+}
+
+#logoutBtn {
+    padding: 8px 15px;
+
+    background: #dc3545;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.welcome-section {
+    padding: 35px 40px 20px;
+}
+
+.welcome-section h2 {
+    color: #333;
+}
+
+.welcome-section p {
+    color: #666;
+    margin-top: 8px;
+}
+
+.stats {
+    padding: 20px 40px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.menu-section {
+    padding: 20px 40px 40px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.menu-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.menu-card h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.menu-card button {
+    padding: 10px 15px;
+
+    background: #1e3c72;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.menu-card button:hover {
+    background: #16325c;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .stats,
+    .menu-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .stats,
+    .menu-section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .welcome-section {
+        padding: 25px 20px 10px;
+    }
+
+}
+
+
+
+/* ================================
+   PARKING SLOT PAGE
+================================ */
+
+.parking-controls {
+    padding: 10px 40px 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.parking-controls input,
+.parking-controls select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.parking-controls input {
+    width: 300px;
+}
+
+.parking-controls select {
+    width: 180px;
+}
+
+.parking-section {
+    padding: 10px 40px 40px;
+}
+
+.parking-lot {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.parking-lot h2 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+.slot-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.slot-card {
+    padding: 18px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.slot-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.slot-card p {
+    color: #555;
+    margin: 6px 0;
+}
+
+.slot-status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Available */
+.slot-card.available {
+    border-color: #28a745;
+}
+
+.slot-card.available .slot-status {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Occupied */
+.slot-card.occupied {
+    border-color: #dc3545;
+}
+
+.slot-card.occupied .slot-status {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Reserved */
+.slot-card.reserved {
+    border-color: #ffc107;
+}
+
+.slot-card.reserved .slot-status {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Maintenance */
+.slot-card.maintenance {
+    border-color: #6c757d;
+}
+
+.slot-card.maintenance .slot-status {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    padding: 30px;
+}
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .slot-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .parking-controls {
+        padding: 10px 20px 20px;
+        flex-direction: column;
+    }
+
+    .parking-controls input,
+    .parking-controls select {
+        width: 100%;
+    }
+
+    .parking-section {
+        padding: 10px 20px 30px;
+    }
+
+    .slot-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/* ========================================
+   RESERVATION PAGE
+======================================== */
+
+.reservation-form-section {
+    padding: 10px 40px 25px;
+}
+
+.reservation-form-card {
+    background: white;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.reservation-form-card h2 {
+    color: #1e3c72;
+    margin-bottom: 25px;
+}
+
+#reservationForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+}
+
+#reservationForm label {
+    font-weight: bold;
+    color: #333;
+}
+
+#reservationForm select,
+#reservationForm input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#reservationForm select:focus,
+#reservationForm input:focus {
+    outline: none;
+    border-color: #1e3c72;
+}
+
+#reservationForm button {
+    grid-column: 1 / -1;
+    padding: 13px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#reservationForm button:hover {
+    background: #16325c;
+}
+
+#reservationMessage {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   MY RESERVATIONS
+======================================== */
+
+.reservation-list-section {
+    padding: 10px 40px 40px;
+}
+
+.reservation-list-section > h2 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+#reservationContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.reservation-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #1e3c72;
+}
+
+.reservation-card h3 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.reservation-card p {
+    color: #555;
+    margin: 8px 0;
+}
+
+.reservation-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.reservation-status.confirmed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.reservation-status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.reservation-status.cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.reservation-status.completed {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.cancel-btn {
+    margin-top: 15px;
+    padding: 9px 14px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #b02a37;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+
+    #reservationContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .reservation-form-section,
+    .reservation-list-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #reservationForm {
+        grid-template-columns: 1fr;
+    }
+
+    #reservationContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   VEHICLE MANAGEMENT
+======================================== */
+
+.vehicle-form-section {
+    margin-top: 20px;
+}
+
+.vehicle-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.vehicle-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.vehicle-card p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.vehicle-card button {
+    border: none;
+    padding: 10px 16px;
+    margin-right: 8px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.vehicle-card button:hover {
+    opacity: 0.85;
+}
+
+
+/* ========================================
+   REPORT TABLE
+======================================== */
+
+.report-table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.report-table th,
+.report-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+    font-weight: bold;
+}
+
+.report-table tr:hover {
+    background: #f5f5f5;
+}
+
+
+/* ========================================
+   SEARCH BOX
+======================================== */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .vehicle-card {
+        padding: 15px;
+    }
+
+}
